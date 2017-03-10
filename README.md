@@ -1,2 +1,2 @@
-# vertical-calculation
-加法的竖式计算code.py
+# my_code
+Talk is cheap,show me the code.
