@@ -186,3 +186,36 @@ b.fill(2)
 # std 标准差
 # var 方差
 # any all
+
+# reduce 按照某轴的方向进行降维
+a = np.array([1,2,3,4])
+print(np.add.reduce(a))   # 10
+
+a = np.aray([[1,2,3],[4,5,6]])
+print(np.add.reduce(a))   # [5,7,9]
+
+print(np.add.reduce(a,axis=1))   # 指定维度 [6,15]
+
+a = np.array(['ab','cd','ef'],np.object)
+print(np.add.reduce(a))   # abcdef
+
+a = np.array([1,1,0,1])
+print(np.logical_and.reduce(a))   # False
+print(np.logical_or.reduce(a))    # True
+
+# accumulate 可以看成保存 reduce 每一步的结果所形成的数组
+a = np.array([1,2,3,4])
+print(np.add.accumblate(a))   # [1,3,6,10]  累加
+
+a = np.array(['ab','cd','ef'],np.object)
+print(np.add.accumulate(a))  # ['ab', 'abcd', 'abcdef']
+
+a = np.array([1,1,0,1])
+print(np.logical_and.accumulate(a))   # [ True,  True, False, False]
+print(np.logical_or.accumulate(a))   # [ True,  True,  True,  True]
+
+# reduceat 方法将操作符运用到指定的下标上，返回一个与 indices 大小相同的数组
+a = np.array([0,10,20,30,40,50])
+indices = np.array([1,4])
+# 这里，indices 为 [1, 4]，所以 60 表示从下标1（包括）加到下标4（不包括）的结果，90 表示从下标4（包括）加到结尾的结果
+print(np.add.reduceat(a,indices))   # [60,90]
