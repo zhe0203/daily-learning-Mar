@@ -139,3 +139,50 @@ x = np.eye(2) + 1j * np.eye(2)
 np.conjugate(x)
 # array([[ 1.-1.j,  0.-0.j],
 #        [ 0.-0.j,  1.-1.j]])
+
+# flat 所有元素的迭代器
+# flatten 返回1个1维数组的赋值
+# ravel 返回一个1为数组
+x = np.array([1,2,3],[4,5,6])
+print(np.ravel(x,orderr = 'F'))
+# resize 改变数组的形状
+# swapaxes(axis1,axis2) 交换两个维度的位置
+a.swapaxes(0,1)
+# transpose 数组的转置
+# a.T  数组的转置
+# squeeze 去除所有长度为1的维度
+
+# copy 返回数组的一个赋值
+# fill 将数组的元组设置为特定值
+b = a.copy()
+b.fill(2)
+
+# tolist 将数组转换为列表
+# tostring 转换为字符串
+# astype 转换为指定类型
+
+# imag 虚部
+# real 实部
+# conjugate()   复共轭
+# conj 复共轭（缩写）
+
+# dump(file) 将二进制数据存在file中
+# dump  将二进制数据表示成字符串
+# tofile(fid,sep='',format='%s')  格式化ASCII码写入文件
+
+# nonzero()   返回所有非零元素的索引
+# sort  沿某轴排序
+# argsort 沿某个轴，返回按排序的索引
+# searchsorted（a,b）  返回将b中元素插入a后能保持有序的索引值
+
+# clip 将数值现址在一定的范围内
+# round 近似到指定精度
+# cumsum 累加和
+# cumprod 累乘积
+
+# prod 求积
+# argmin argmax  最小、最大值索引位置
+# ptp 最大值减去最小值
+# std 标准差
+# var 方差
+# any all
